@@ -12,8 +12,12 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
+//import org.hibernate.search.annotations.Analyze;
 //import org.hibernate.search.annotations.Field;
+//import org.hibernate.search.annotations.Index;
 //import org.hibernate.search.annotations.Indexed;
+//import org.hibernate.search.annotations.Store;
+//import org.hibernate.search.annotations.TermVector;
 import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.springframework.security.core.Authentication;
 
@@ -22,10 +26,11 @@ import org.springframework.security.core.Authentication;
 @Table(name = "zamowienia")
 public class Zamowienia {
 
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name ="email_user")
 	@NotNull(message = "Musisz podać swój adres email")
 	private String emailUser;
+	
 	
 	@Id
 	//@GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,31 +39,31 @@ public class Zamowienia {
 	@Column(name = "id_zamowienia")
 	private int idZamowienia;
 	
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name = "data_zamowienia")
 	@NotNull
 	private Date dataZamowienia;
 	
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name = "nazwa_zamowienia")
 	@NotNull(message = "Musisz podać nazwę zamówienia")
 	private String nazwaZamowienia;
 	
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name = "ilosc_zamowienia")
 	@NotNull(message = "Musisz podać ilość zamówienia")
 	private int iloscZamowienia;
 	
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name = "powod_zamowienia")
 	@NotNull(message = "Musisz pogać powód zamówienia")
 	private String powodZamowienia;
 	
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name = "data_przyjecia")
 	private Date dataPrzyjecia;
 	
-	//@Field
+	//@Field(index = Index.YES, analyze = Analyze.YES, store = Store.NO)
 	@Column(name = "status")
 	@NotNull
 	private String status;

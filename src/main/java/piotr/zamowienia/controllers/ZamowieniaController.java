@@ -113,7 +113,7 @@ import piotr.zamowienia.service.ZamowieniaService;
 		    zamowieniaRepository.save(zamowienia);
 		    return "zamowienia";
 		}
-		/*
+		/* 
 		@GET
 		@PutMapping(value = "/updatezamowienia/${id}")
 		@Secured(value= {"ROLE_ADMIN"})
@@ -176,6 +176,8 @@ import piotr.zamowienia.service.ZamowieniaService;
 				case "nazwaZamowienia":
 					zamowieniaList = zamowieniaRepository.findAllByOrderByIdZamowieniaDesc();
 					break;
+				case "iloscZamowienia":
+					zamowieniaList = zamowieniaRepository.findAllByOrderByIdZamowieniaDesc();
 				}
 			} else if (kierunek !=null && kierunek.equalsIgnoreCase("ASC")) {
 				switch (poCzymStortowac) {
