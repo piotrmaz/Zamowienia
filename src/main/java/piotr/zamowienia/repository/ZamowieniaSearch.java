@@ -20,13 +20,12 @@
 //	@PersistenceContext
 //	private EntityManager entityManager;
 //	
-//	 FullTextEntityManager fullTextEntityManager =
-//		      org.hibernate.search.jpa.Search.
-//		      getFullTextEntityManager(entityManager);
 //	
 //	public List<Zamowienia> search(String text) {
 //		
-//		
+//		 FullTextEntityManager fullTextEntityManager =
+//			      org.hibernate.search.jpa.Search.
+//			      getFullTextEntityManager(entityManager);
 //		  
 //		try {
 //			fullTextEntityManager 

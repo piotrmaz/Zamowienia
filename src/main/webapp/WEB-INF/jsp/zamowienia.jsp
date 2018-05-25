@@ -21,42 +21,62 @@
 				<form action="${pageContext.request.contextPath}/searchZamowienia" method="POST">
 	<fieldset>
     <legend>Wyszukiwanie</legend>
- <table>
- <tr>
- 	 <td><label><input type="text" name="nazwaZamowienia" placeholder="Nazwa zamówienia"/></label></td>
-    
-      <td><label><input type="text" name="idZamowienia" placeholder="ID zamówienia" /></label></td>
-    
-      <td><label><input type="text" name="emailUser" placeholder="email"/></label></td>
+    <p>
+      <label>
+       <input type="text" name="nazwaZamowienia" placeholder="Nazwa zamówienia"/>
        
-      <td><label><input type="text" name="dataZamowienia" placeholder="Data zamówienia"/></label></td>
-    
-      <td><td><label><input type="text" name="status" placeholder="Status" /></label></td>
-   
-  <td><input type="submit" value="Szukaj" onclick="window.location.href='${pageContext.request.contextPath}/searchZamowienia'"/></td>
-  
-  </tr>
-  </table>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="text" name="idZamowienia" placeholder="ID zamówienia" />
+       
+      </label>
+    </p>
+    <p>
+      <label>
+       <input type="text" name="emailUser" placeholder="email"/>
+        
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="text" name="dataZamowienia" placeholder="Data zamówienia"/>
+      </label>
+    </p>
+     <p>
+      <label>
+        <input type="text" name="status" placeholder="Status" />
+      </label>
+    </p>
+     <p>
+  <input type="submit" value="Szukaj" onclick="window.location.href='${pageContext.request.contextPath}/searchZamowienia'"/>
+  </p>
   </fieldset>
  
   
    <fieldset>
     <legend>Sortowanie</legend>
-    <table>
-    <tr>
-      <td><label><a href="${pageContext.request.contextPath}/sortujZamowienia/idZamowienia/desc">Sortuj malejąco</a></label></td>
-     
-      <td><td><td><label><a href="${pageContext.request.contextPath}/sortujZamowienia/idZamowienia/asc">Sortuj rosnąco</a></label></td>
-    
-      </tr>
-      </table>
+    <p>
+      <label>
+       <a href="${pageContext.request.contextPath}/sortujZamowienia/idZamowienia/desc">Sortuj malejąco</a>
+      </label>
+    </p>
+    <p>
+      <label>
+       <a href="${pageContext.request.contextPath}/sortujZamowienia/idZamowienia/asc">Sortuj rosnąco</a>
+      </label>
+    </p>
   </fieldset>
-  </form>
-						
+		
+				</form>
+				
+				
+				
 			</td>
-			<!--  <td align="right" valign="middle"><input type="button"
+			<td align="right" valign="middle"><input type="button"
 				class="formButton2" onclick="window.location.href='${pageContext.request.contextPath}/nowezamowienie'"
-				value="<s:message code="zamowienia.page.dodaj"/>" /> -->
+				value="<s:message code="zamowienia.page.dodaj"/>" />
 				
 				
 				
