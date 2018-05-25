@@ -1,68 +1,38 @@
-//package piotr.zamowienia.repository;
-//
-//import java.sql.Date;
-//
-//import javax.persistence.criteria.CriteriaBuilder;
-//import javax.persistence.criteria.CriteriaQuery;
-//import javax.persistence.criteria.Predicate;
-//import javax.persistence.criteria.Root;
-//
-//import org.springframework.data.jpa.domain.Specification;
-//import piotr.zamowienia.models.Zamowienia;
-//
-//public class ZamowieniaSpecifications {
-//
-//
-//	public static Specification<Zamowienia> nazwaZamowienia(String nazwaZamowienia) {
-//		return new Specification<Zamowienia>() {
-//			@Override
-//			public Predicate toPredicate(Root<Zamowienia> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-//				
-//				return cb.equal(root.get("nazwaZamowienia"), nazwaZamowienia);
-//			}
-//		};
-//	}
-//	
-//	public static Specification<Zamowienia> idZamowienia(Integer idZamowienia) {
-//		return new Specification<Zamowienia>() {
-//			@Override
-//			public Predicate toPredicate(Root<Zamowienia> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-//				
-//				return cb.equal(root.get("idZamowienia"), idZamowienia);
-//			}
-//		};
-//	}
-//	
-//	public static Specification<Zamowienia> emailUser(String emailUser) {
-//		return new Specification<Zamowienia>() {
-//			@Override
-//			public Predicate toPredicate(Root<Zamowienia> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-//				
-//				return cb.equal(root.get("emailUser"), emailUser);
-//			}
-//		};
-//	}
-//	
-//	public static Specification<Zamowienia> dataZamowienia(Date dataZamowienia) {
-//		return new Specification<Zamowienia>() {
-//			@Override
-//			public Predicate toPredicate(Root<Zamowienia> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-//				
-//				return cb.equal(root.get("dataZamowienia"), dataZamowienia);
-//			}
-//		};
-//	}
-//	
-//	public static Specification<Zamowienia> status(String status) {
-//		return new Specification<Zamowienia>() {
-//			@Override
-//			public Predicate toPredicate(Root<Zamowienia> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-//				
-//				return cb.equal(root.get("status"), status);
-//			}
-//		};
-//	}
-//
-//	
-//	
-//}
+package piotr.zamowienia.repository;
+
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.util.StringUtils;
+import piotr.zamowienia.models.SzukajZamowieniaForm;
+import piotr.zamowienia.models.Zamowienia;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ZamowieniaSpecifications implements Specification<Zamowienia> {
+
+	private SzukajZamowieniaForm szukajZamowieniaForm;
+
+	public ZamowieniaSpecifications(SzukajZamowieniaForm szukajZamowieniaForm) {
+		this.szukajZamowieniaForm = szukajZamowieniaForm;
+	}
+
+	@Override
+	public Predicate toPredicate(Root<Zamowienia> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+
+		List<Predicate> predicates = new ArrayList<>();
+
+		if (!StringUtils.isEmpty(szukajZamowieniaForm.getNazwaZamowienia())) {
+			predicates.add(cb.equal(root.get("nazwaZamowienia"), szukajZamowieniaForm.getNazwaZamowienia()));
+		}
+
+		if (szukajZamowieniaForm.getIdZamowienia() != null) {
+			predicates.add(cb.equal(root.get("idZamowienia"), szukajZamowieniaForm.getIdZamowienia()));
+		}
+
+		return cb.and(predicates.toArray(new Predicate[predicates.size()]));
+	}
+}

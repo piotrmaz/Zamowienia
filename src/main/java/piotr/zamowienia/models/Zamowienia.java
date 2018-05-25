@@ -12,9 +12,6 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
-//import org.hibernate.search.annotations.Field;
-//import org.hibernate.search.annotations.Indexed;
-import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.springframework.security.core.Authentication;
 
 @Entity

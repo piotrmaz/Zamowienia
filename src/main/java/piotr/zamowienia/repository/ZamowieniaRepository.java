@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import piotr.zamowienia.models.Zamowienia;
 
 
-@Repository("zamowieniaRepository")
+@Repository
 public interface ZamowieniaRepository extends JpaRepository<Zamowienia, Long>, JpaSpecificationExecutor<Zamowienia> {
 	
 
