@@ -1,6 +1,6 @@
 # Zamowienia
 
-add in aplication.properties:
+add in aplication.properties
 
 spring.datasource.url=jdbc:oracle:thin:@ ACCESS DATA TO DB
 
