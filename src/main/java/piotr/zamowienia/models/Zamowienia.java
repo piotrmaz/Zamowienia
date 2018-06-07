@@ -11,9 +11,13 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+<<<<<<< HEAD
 //
 //import org.hibernate.search.annotations.Field;
 //import org.hibernate.search.annotations.Indexed;
+=======
+
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 import org.springframework.security.core.Authentication;
 
 @Entity
@@ -21,7 +25,11 @@ import org.springframework.security.core.Authentication;
 @Table(name = "zamowienia")
 public class Zamowienia {
 
+<<<<<<< HEAD
 //	@Field
+=======
+	//@Field
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 	@Column(name ="email_user")
 	@NotNull(message = "Musisz podać swój adres email")
 	private String emailUser;

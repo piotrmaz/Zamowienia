@@ -12,44 +12,11 @@ body {
 	width: 1300px;
 }
 
-.first {
-  float:left;
-  width:20%;
-  margin:3%;
-  padding:2%;
-}
-.second {
-  float:left;
-  width:20%;
-  margin:3%;
-  padding:2%;
-	
-}
-
-.thirth{
-  float:left;
-  width:20%;
-  margin:3%;
-  padding:2%;
-}
-
-.fourth{
-  float:left;
-  width:20%;
-  margin:3%;
-  padding:2%;
-}
-
-.fifth{
-  float:left;
-  width:20%;
-  margin:3%;
-  padding:2%;
-}
 .inline {
-  display: inline;
-  padding: 5px;
-  vertical-align: super;
+	 display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 5px 10px 6px 12px;
   background-color: lightblue;
 	
 }

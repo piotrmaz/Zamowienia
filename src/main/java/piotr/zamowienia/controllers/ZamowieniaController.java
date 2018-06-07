@@ -20,7 +20,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import piotr.zamowienia.models.SzukajZamowieniaForm;
+<<<<<<< HEAD
 import piotr.zamowienia.models.User;
+=======
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 import piotr.zamowienia.models.Zamowienia;
 import piotr.zamowienia.repository.ZamowieniaRepository;
 //import piotr.zamowienia.repository.ZamowieniaSearch;
@@ -29,6 +32,7 @@ import piotr.zamowienia.service.ZamowieniaService;
 
 @Controller
 public class ZamowieniaController {
+<<<<<<< HEAD
 
 	@Autowired
 	ZamowieniaService zamowieniaService;
@@ -36,6 +40,15 @@ public class ZamowieniaController {
 	@Autowired
 	ZamowieniaRepository zamowieniaRepository;
 
+=======
+
+	@Autowired
+	ZamowieniaService zamowieniaService;
+
+	@Autowired
+	ZamowieniaRepository zamowieniaRepository;
+
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 	@GET
 	@RequestMapping(value = "/zamowienia")
 	@Secured(value = { "ROLE_ADMIN", "ROLE_USER" })
@@ -49,7 +62,11 @@ public class ZamowieniaController {
 	@RequestMapping(value = "/zamowienia/{page}")
 	@Secured(value = { "ROLE_ADMIN", "ROLE_USER" })
 	public String showZamowieniaPageable(@PathVariable("page") int page, Model model) {
+<<<<<<< HEAD
 		int elements = 5;
+=======
+		int elements = 2;
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 		Page<Zamowienia> pages = zamowieniaService.findAllPages(new PageRequest(page, elements));
 		int totalPages = pages.getTotalPages();
 		int currentPage = pages.getNumber();
@@ -84,6 +101,7 @@ public class ZamowieniaController {
 		return "zamowienia";
 	}
 
+<<<<<<< HEAD
 	@POST
 	@PutMapping(value = "/zamowienia/edit/{id}")
 	@Secured(value = { "ROLE_ADMIN" })
@@ -107,13 +125,36 @@ public class ZamowieniaController {
 	
 	
 	
+=======
+	@GET
+	@PutMapping(value = "/zamowienia/edit/{id}")
+	@Secured(value = { "ROLE_ADMIN" })
+	public String updateZamowienia(@PathVariable("id") Integer id, @RequestBody Zamowienia zamowienia, Model model) {
+
+		java.sql.Date sql = new java.sql.Date(new java.util.Date().getTime());
+		zamowienia = zamowieniaRepository.findByIdZamowienia(id);
+
+		Integer.parseInt("idZamowienia");
+
+		zamowienia.setDataPrzyjecia(sql);
+		zamowienia.setStatus("zrealizowano");
+
+		zamowieniaRepository.save(zamowienia);
+		return "zamowienia";
+	}
+
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 	@POST
 	@RequestMapping(value = "/addzam")
 	@Secured(value = { "ROLE_ADMIN", "ROLE_USER" })
 	public String zapiszZamowienie(Model model, @Valid Zamowienia zamowienia, BindingResult result) {
 		String strona = null;
 
+<<<<<<< HEAD
 		zamowieniaService.saveZamowienia(zamowienia); 
+=======
+		zamowieniaService.saveZamowienia(zamowienia);
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 		int elements = 10;
 		int page = 0;
 		Page<Zamowienia> pages = zamowieniaService.findAllPages(new PageRequest(page, elements));
@@ -123,7 +164,10 @@ public class ZamowieniaController {
 		model.addAttribute("zamowieniaList", zamowieniaList);
 		model.addAttribute("totalPages", totalPages);
 		model.addAttribute("currentPage", currentPage);
+<<<<<<< HEAD
 		model.addAttribute("szukajZamowieniaForm", new SzukajZamowieniaForm());
+=======
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 		strona = "zamowienia";
 		return strona;
 	}
@@ -132,7 +176,11 @@ public class ZamowieniaController {
 	@RequestMapping(value = "/sortujZamowienia/{poczymsortowac}/{kierunek}")
 	public String sortujZamowienia(@PathVariable("poczymsortowac") String poCzymStortowac, @PathVariable("kierunek") String kierunek, Model model) {
 
+<<<<<<< HEAD
 	List<Zamowienia> zamowieniaList = new ArrayList<>();
+=======
+		List<Zamowienia> zamowieniaList = new ArrayList<>();
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 
 		if (kierunek != null && kierunek.equalsIgnoreCase("DESC")) {
 			switch (poCzymStortowac) {
@@ -157,4 +205,8 @@ public class ZamowieniaController {
 
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
