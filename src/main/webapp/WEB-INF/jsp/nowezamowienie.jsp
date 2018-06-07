@@ -60,7 +60,7 @@
 					<s:message code="zamowienia.page.nazwaZamowienia"/>
 				</td>
 				<td width="270" align="left">
-					<sf:input path="nazwaZamowienia" size="28" id="nazwaZamowienia" type="text"/>
+					<sf:input path="nazwaZamowienia" size="28" id="nazwaZamowienia" type="text"/>*
 				</td>
 			</tr>
 			<tr>
@@ -72,7 +72,7 @@
 					<s:message code="zamowienia.page.iloscZamowienia"/>
 				</td>
 				<td width="270" align="left">
-					<sf:input path="iloscZamowienia" size="28" id="iloscZamowienia" type="number"/>
+					<sf:input path="iloscZamowienia" size="28" id="iloscZamowienia" type="number"/>*
 				</td>
 			</tr>
 			<tr>
@@ -84,7 +84,7 @@
 					<s:message code="zamowienia.page.powodZamowienia"/>
 				</td>
 				<td width="270" align="left">
-					<sf:input path="powodZamowienia" size="28" id="powodZamowienia" type="text"/>
+					<sf:input path="powodZamowienia" size="28" id="powodZamowienia" type="text"/>*
 				</td>
 			</tr>
 			<tr>

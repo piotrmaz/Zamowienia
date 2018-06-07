@@ -69,11 +69,6 @@
 //		
 //		Specifications<Zamowienia> query1 = where(ZamowieniaSpecifications.idZamowienia(idZamowienia));
 //
-//		//Specifications<Zamowienia> query2 = where(ZamowieniaSpecifications.emailUser(emailUser));
-//		
-//		//Specifications<Zamowienia> query3 = where(ZamowieniaSpecifications.dataZamowienia(dataZamowienia));
-//		
-//		//Specifications<Zamowienia> query4 = where(ZamowieniaSpecifications.status(status));
 //
 //		
 //		

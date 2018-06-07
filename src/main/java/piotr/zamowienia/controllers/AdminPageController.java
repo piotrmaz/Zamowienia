@@ -31,7 +31,7 @@ public class AdminPageController {
 	public String showAdminPanel() {
 		return "admin/admin";
 	}
- 
+  
 	@GET
 	@RequestMapping(value = "/admin/users")
 	@Secured(value = { "ROLE_ADMIN" })

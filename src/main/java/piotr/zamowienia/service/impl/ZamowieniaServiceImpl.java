@@ -66,6 +66,14 @@ public class ZamowieniaServiceImpl implements ZamowieniaService{
 	}
 
 
+
+	@Override
+	public Zamowienia findByIdZamowienia(int idZamowienia) {
+	
+		return zamowieniaRepository.findByIdZamowienia(idZamowienia);
+	}
+
+
 /*
 	@Override
 	public Zamowienia findByIdZamowienia(int id) {

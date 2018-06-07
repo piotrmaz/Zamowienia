@@ -16,7 +16,11 @@ public interface ZamowieniaService {
 	
 	public Page<Zamowienia> findAllPages(Pageable pageable);
 	
-//	public Zamowienia findByIdZamowienia(int id);
+	public Zamowienia findByIdZamowienia(int idZamowienia);
+	
+	//public Page<Zamowienia> findAllByOrderByIdZamowieniaDesc(Pageable pageable);
+
+	//Page<Zamowienia> findAllByOrderByIdZamowieniaDesc(int pageNumber);
 	
 //	public void updateZamowienia(Zamowienia zamowienia);
 
