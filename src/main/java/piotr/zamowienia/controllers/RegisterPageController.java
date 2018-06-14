@@ -27,7 +27,7 @@ public class RegisterPageController {
 		return "register";
 	}
 
-	@POST
+	@POST 
 	@RequestMapping(value = "/adduser")
 	public String registerUserAction(@Valid User user, BindingResult result, Model model) {
 		String returnPage = null;

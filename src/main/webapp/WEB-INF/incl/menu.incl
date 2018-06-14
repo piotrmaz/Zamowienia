@@ -10,7 +10,7 @@
 			&nbsp;
 		</sec:authorize>
 		<sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')">
-			<a href="/wyszukajzam" class="tableMenuLink"><s:message code="zamowienia.page.search"/></a>
+			<a href="/nowezamowienie" class="tableMenuLink"><s:message code="zamowienia.page.add"/></a>
 		</sec:authorize>
 		</td>
 		

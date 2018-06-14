@@ -19,6 +19,13 @@
 		<table width="500" border="0" cellpadding="4" cellspacing="1"
 			align="center">
 			<tr>
+				<td colspan="2" class="header" align="center" valign="middle">
+					<img src="/resources/images/add.png" width="15%" height="15%">
+					Dodaj nowe zamówienie
+				</td>
+			</tr>
+			
+			<tr>
 				<td width="130" align="right" >
 					<s:message code="zamowienia.page.emailUser"/>
 				</td>

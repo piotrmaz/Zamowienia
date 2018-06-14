@@ -23,6 +23,12 @@
 			align="center">
 
 			<tr>
+				<td colspan="2" class="header" align="center" valign="middle">
+					<img src="/resources/images/add_user.png" width="15%" height="5%">
+					Rejestracja użytkownika
+				</td>
+			</tr>
+			<tr>
 				<td width="130" align="right" ><s:message code="register.name"/></td>
 				<td width="270" align="left"><sf:input path="name"
 						size="28" id="name" /></td>

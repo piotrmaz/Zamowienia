@@ -35,11 +35,7 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
 		</dependency> 
-<<<<<<< HEAD
-<!--   		<dependency>
-=======
-<!--  		<dependency>
->>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
+  <!-- 		<dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-search-orm</artifactId>
     <version>5.8.2.Final</version>

@@ -24,7 +24,7 @@
 			
 			<tr>
 				<td colspan="2" class="header" align="center" valign="middle">
-					<img src="/resources/images/useredit.png">&nbsp;
+					<img src="/resources/images/edit.png" width="10%" height="30%">&nbsp;
 					<s:message code="admin.users.edit.title"/>
 				</td>
 			</tr>

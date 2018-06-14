@@ -20,26 +20,24 @@
     <tr>
         <td width="200" align="left" valign="middle">
             <form:form action="/searchZamowienia" method="POST" modelAttribute="szukajZamowieniaForm">
-<<<<<<< HEAD
-          
                 <fieldset>
                     <legend>Wyszukiwanie</legend>
                     <table>
                     <tr>
                       <td> <label>
-                            <form:label path="nazwaZamowienia">Nazwa zamówienia</form:label>
-                            <form:input path="nazwaZamowienia"/>
+                            <form:label path="nazwaZamowienia" ></form:label>
+                            <form:input path="nazwaZamowienia" placeholder="Nazwa zamówienia"/>
                         </label></td>
                         
                     
                       <td><label>
-                            <form:label path="idZamowienia">ID zamówienia</form:label>
-                            <form:input path="idZamowienia"/>
+                            <form:label path="idZamowienia" ></form:label>
+                            <form:input path="idZamowienia" placeholder="Id zamówienia"/>
                         </label></td>
                         
                            <td><label>
-                            <form:label path="emailUser">testowe</form:label>
-                            <form:input path="emailUser"/>
+                            <form:label path="emailUser"></form:label>
+                            <form:input path="emailUser" placeholder="pole testowe"/>
                         </label></td>
                         
                    
@@ -48,45 +46,20 @@
                         <%--<p>--%>
                         <%--<label>--%>
                         <%--<input type="text" name="dataZamowienia"/>--%>
-=======
-                <fieldset>
-                    <legend>Wyszukiwanie</legend>
-                    <p>
-                        <label>
-                            <form:label path="nazwaZamowienia">Nazwa zamówienia</form:label>
-                            <form:input path="nazwaZamowienia"/>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <form:label path="idZamowienia">ID zamówienia</form:label>
-                            <form:input path="idZamowienia"/>
-                        </label>
-                    </p>
-                        <%--<p>--%>
-                        <%--<label>--%>
-                        <%--<input type="text" name="emailUser"/>--%>
-
->>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
                         <%--</label>--%>
                         <%--</p>--%>
                         <%--<p>--%>
                         <%--<label>--%>
-<<<<<<< HEAD
                         <%--<input type="text" name="status"/>--%>
-=======
-                        <%--<input type="text" name="dataZamowienia"/>--%>
->>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
                         <%--</label>--%>
                         <%--</p>--%>
                         <%--<p>--%>
                         <%--<label>--%>
-<<<<<<< HEAD
                         <%--<input type="text" name="emailUser"/>--%>
                         <%--</label>--%>
                     
                        <td><input type="submit" value="Szukaj"/></td>
-                    </tr>
+                   </tr>
                     </table>
                     <fieldset>
                 <legend>Sortowanie</legend>
@@ -116,40 +89,10 @@
  <!--        <td align="right" valign="middle"><input type="button"
                                                  class="formButton2" onclick="window.location.href='${pageContext.request.contextPath}/nowezamowienie'"
                                                  value="<s:message code="zamowienia.page.dodaj"/>"/> -->
-=======
-                        <%--<input type="text" name="status"/>--%>
-                        <%--</label>--%>
-                        <%--</p>--%>
-                    <p>
-                        <input type="submit" value="Szukaj"/>
-                    </p>
-                </fieldset>
-            </form:form>
-
-            <fieldset>
-                <legend>Sortowanie</legend>
-                <p>
-                    <label>
-                        <a href="${pageContext.request.contextPath}/sortujZamowienia/idZamowienia/desc">Sortuj malejąco</a>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <a href="${pageContext.request.contextPath}/sortujZamowienia/idZamowienia/asc">Sortuj rosnąco</a>
-                    </label>
-                </p>
-            </fieldset>
-
-
-        </td>
-        <td align="right" valign="middle"><input type="button"
-                                                 class="formButton2" onclick="window.location.href='${pageContext.request.contextPath}/nowezamowienie'"
-                                                 value="<s:message code="zamowienia.page.dodaj"/>"/>
->>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
 
 
     </tr>
-</table>
+    </table>
 <br/>
 
 <table width="1300" border="0" cellpadding="6" cellspacing="0" class="tableZamowienia">
@@ -177,14 +120,8 @@
             <td class="tdUsers"><c:out value="${z.powodZamowienia }"/></td>
             <td class="tdUsers"><c:out value="${z.dataPrzyjecia }"/></td>
             <td class="tdUsers"><c:out value="${z.status }"/></td>
-<<<<<<< HEAD
-  <!--   <td class="tdUsers"><input type="image" src="/resources/images/edit1.png" border="0"
-             onclick="window.location.href='${pageContext.request.contextPath}/zamowienia/edit/${idZamowienia}'"/></td>
-                                       -->
-=======
             <td class="tdUsers"><input type="image" src="/resources/images/edit1.png" border="0"
                                        onclick="window.location.href='${pageContext.request.contextPath}/zamowienia/edit/${u.id}'"/></td>
->>>>>>> 50367bbfa033a1df40975e4d2279cbb97b7fa992
         </tr>
     </c:forEach>
 
